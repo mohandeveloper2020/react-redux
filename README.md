@@ -19,13 +19,13 @@ example:
 ```
 import { configureStore } from "@reduxjs/toolkit";
 
-  const store = configureStore({
+const store = configureStore({
   reducer: {
     userInfo: userSlice,
   },
-  });
+});
 
-  export default store;
+export default store;
 ```
 
 ## create slices folder and create new slice file
@@ -34,38 +34,62 @@ import { configureStore } from "@reduxjs/toolkit";
 - reducers function have state and action properties
 - action has payload
 - export reducers using actions
-
-  example:
-
-  ```
-  export const { addUser, deleteUser } = userSlice.actions;
-  ```
-
 - export defaul slice with reducer
 
   example:
 
   ```
-  export default userSlice.reducer;
+  import { createSlice } from "@reduxjs/toolkit";
+
+  export const userSlice = createSlice({
+    name: "users",
+    initialState,
+    reducers: {
+      addUser: (state, action: PayloadAction<User>) => {
+        state.users.push(action.payload);
+      },
+      deleteUser: (state, action: PayloadAction<number>) => {
+        state.users = state.users.filter(
+          (user, index) => index !== action.payload
+        );
+      },
+    },
+  });
   ```
+
+export const { addUser, deleteUser } = userSlice.actions;
+
+export default userSlice.reducer;
+
+```
 
 ## on viewing page
 
 - useSelector with state, slice name, and store reducer name
 
-  example:
+example:
 
-  ```
-  const users = useSelector((state: RootState) => state.userInfo.users);
-  ```
+```
+
+const users = useSelector((state: RootState) => state.userInfo.users);
+
+```
 
 ## on sending page
 
 - useDispatch
 
-  example:
+example:
 
-  ```
-  const dispatch = useDispatch();
-  const handleDelete = (index: number) => {dispatch(deleteUser(index));};
-  ```
+```
+
+const dispatch = useDispatch();
+const handleDelete = (index: number) => {dispatch(deleteUser(index));};
+
+```
+
+```
+
+```
+
+```
