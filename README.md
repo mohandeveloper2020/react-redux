@@ -89,7 +89,3 @@ const handleDelete = (index: number) => {dispatch(deleteUser(index));};
 ```
 
 ```
-
-```
-
-```
