@@ -63,7 +63,7 @@ export default userSlice.reducer;
 
 ```
 
-## on viewing page
+## on viewing page use hook
 
 - useSelector with state, slice name, and store reducer name
 
@@ -75,7 +75,7 @@ const users = useSelector((state: RootState) => state.userInfo.users);
 
 ```
 
-## on sending page
+## on sending page use hook
 
 - useDispatch
 
