@@ -25,7 +25,9 @@ const UserInput = () => {
       onSubmit={handleSubmit}
       className="bg-white rounded-2xl shadow-md p-8 w-full max-w-sm flex flex-col gap-6 sticky top-10"
     >
-      <h2 className="text-2xl font-semibold text-gray-800">User Details</h2>
+      <h2 className="text-2xl font-semibold text-gray-800">
+        Enter User Details
+      </h2>
 
       <div className="flex flex-col gap-1">
         <label htmlFor="name" className="text-sm font-medium text-gray-600">
