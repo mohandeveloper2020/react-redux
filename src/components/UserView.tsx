@@ -43,7 +43,7 @@ const UserView = () => {
               <p className="text-sm text-gray-500">Age: {user.age}</p>
             </div>
 
-            <button onClick={() => handleDelete(index)}>Delete</button>
+            <button onClick={() => handleDelete(index)}>Delete item</button>
           </div>
         ))
       )}
