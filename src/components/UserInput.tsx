@@ -29,7 +29,7 @@ const UserInput = () => {
         Enter User Details
       </h2>
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col items-start gap-1">
         <label htmlFor="name" className="text-sm font-medium text-gray-600">
           Name
         </label>
@@ -39,11 +39,11 @@ const UserInput = () => {
           value={formInput.name}
           onChange={(e) => setFormInput({ ...formInput, name: e.target.value })}
           placeholder="Enter your name"
-          className="border border-gray-300 rounded-lg px-4 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
         />
       </div>
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col items-start gap-1">
         <label htmlFor="age" className="text-sm font-medium text-gray-600">
           Age
         </label>
@@ -53,7 +53,7 @@ const UserInput = () => {
           value={formInput.age}
           onChange={(e) => setFormInput({ ...formInput, age: e.target.value })}
           placeholder="Enter your age"
-          className="border border-gray-300 rounded-lg px-4 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
         />
       </div>
 
